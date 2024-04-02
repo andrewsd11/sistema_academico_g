@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sistema Acadêmico</title>
+</head>
+<body>
+
+<div class="container mt-5">
+<button class="btn btn-warning mt-5" onclick="window.location.href='/admin/'">Django Admin</button>
+    <h1 class="text-center">Pessoas</h1>
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nome do Pai</th>
+                <th>Nome da Mãe</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Email</th>
+                <th>Cidade</th>
+                <th>Ocupação</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pessoas in pessoas %}
+            <tr>
+                <td>{{ pessoas.nome}}</td>
+                <td>{{ pessoas.nome_pai}}</td>
+                <td>{{ pessoas.nome_mae}}</td>
+                <td>{{ pessoas.cpf}}</td>
+                <td>{{ pessoas.data_nasc}}</td>
+                <td>{{ pessoas.email}}</td>
+                <td>{{ pessoas.cidade}}</td>
+                <td>{{ pessoas.ocupacao}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+   
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

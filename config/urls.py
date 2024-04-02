@@ -15,9 +15,27 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', IndexView.as_view(), name='index'),
+
+    path('ocupacao.html', OcupacaoView.as_view(), name='ocupacao'),
+    path('area.html', AreaView.as_view(), name='area'),
+    path('periodo.html', PeriodoView.as_view(), name='periodo'),
+    path('turma.html', TurmaView.as_view(), name='turma'),
+    path('cidade.html', CidadeView.as_view(), name='cidade'),
+    path('tipos_avaliacao.html', Tipos_AvaliacaoView.as_view(), name='tipos_avalicao'),
+    path('pessoa.html', PessoaView.as_view(), name='pessoa'),
+    path('instituicao.html', InstituicaoView.as_view(), name='instituicao'),
+    path('curso.html', CursoView.as_view(), name='curso'),
+    path('disciplina.html', DisciplinaView.as_view(), name='disciplinas'),
+    path('matricula.html', MatriculaView.as_view(), name='matricula'),
+    path('avaliacao.html', AvaliacaoView.as_view(), name='avaliacao'),
+    path('frequencia.html', FrequenciaView.as_view(), name='frequencia'),
+    path('ocorrencia.html', OcorrenciaView.as_view(), name='ocorrencia'),
+    path('disciplinacurso.html', Disciplina_CursoView.as_view(), name='disciplina_curso'),
 ]

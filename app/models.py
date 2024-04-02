@@ -52,7 +52,7 @@ class Tipos_Avaliacao(models.Model):
     nome = models.CharField(max_length=100, verbose_name="Tipos de Avaliação")
 
     def __str__(self):
-        return {self.nome}
+        return self.nome
     class Meta:
         verbose_name = "Tipo de Avaliação"
         verbose_name_plural = "Tipos de Avaliações"
